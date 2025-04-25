@@ -1,0 +1,15 @@
+[package]
+name = "gloc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokei = "12.1"
+git2 = "0.20"
+tempfile = "3.19"
+
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+panic = "abort"
